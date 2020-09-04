@@ -1,5 +1,3 @@
-
-//----------------------------------------------------//
 let l = document.getElementById("level");// DOM cấp
 let q = document.getElementById("display_Question"); // DOM Câu hỏi
 let a = document.getElementById("0");// DOM đáp án A
