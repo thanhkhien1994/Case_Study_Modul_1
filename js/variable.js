@@ -1,4 +1,3 @@
-let objStudents = localStorage.getItem("savedData") ? JSON.parse(localStorage.getItem("savedData")) : JSON.stringify(students);
 let students = [
     {
         isName: "Nguyễn Thanh Khiên" ,
@@ -9,6 +8,8 @@ let students = [
         isMail: "Thanhkhien1994@gmail.com/0335915359"
     }
 ]
+let objStudents = localStorage.getItem("savedData") ? JSON.parse(localStorage.getItem("savedData")) : JSON.stringify(students);
+
 let gender = "Nam";
 let _name = document.getElementById("name");
 let _class = document.getElementById("class");
