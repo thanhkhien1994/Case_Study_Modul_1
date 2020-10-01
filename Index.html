@@ -2,42 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Title</title>
 </head>
-<style>
-  table{
-      background-image: url("bg.jpg");
-      color:gold
-  }
-</style>
-<body>
-    <div style="margin-left: 25%; margin-top: 100px;">
-        <h1>Ai là triệu phú</h1>
-       <table border="1" width="500px" height="300px" id="table" style="border-collapse: collapse;">
-        <tr>
-            <th colspan="2" rowspan="2"><p id="display_Question"></p></th>
-            <td width="100px" onclick="star_Game();"><p id="s">Star Game</p</td>
-        </tr>
-        <tr>
-            <td><p id="score">Score: 0</p></td>
-        </tr>
-        <tr height="70px">
-            <td width="225px" onclick="_answer(0);"><p id="0"></p></td>
-            <td width="225px" onclick="_answer(1);"><p id="1"></p></td>
-            <td><p id="level">Level: 1</p></td>
-        </tr>
-        <tr height="70px">
-            <td onclick="_answer(2);"><p id="2"></p></td>
-            <td onclick="_answer(3);"><p id="3"></p></td>
-            <td><p id="money">Money: 0$</p></td>
-        
-        
-    </table> 
-    <button id="restart" onclick="_reload();">Restart</button>  
-    </div>
-    <script src="question.js"></script>
-    <script src="js.js"></script>
-  
+<body onload="showListStudent();">
+<div class="row">
+<div class="col-sm-3" style="position: fixed; top: 0; left: 0;">
+    <table>
+        <tr><th colspan="2"><p>CTCP-CODEGYM VIỆT NAM</p></th></tr>
+        <tr><td><input type="text"  placeholder="Nhập tên học viên" id="search" onkeyup="searchStudent();"></td></tr>
+        <tr><td><p id="display"></p></td></tr>
+    </table><hr><br><br>
+    <fieldset><legend>Thêm học viên</legend>
+        <table>
+            <tr><td colspan="2"><input type="text" placeholder="Nhập họ tên" id="name"></td></tr>
+            <tr><td colspan="2"><input type="text" placeholder="Nhập Lớp" id="class"></td></tr>
+            <tr><td colspan="2"><input type="number" placeholder="Nhập tuổi" id="age"></td></tr>
+            <tr><td colspan="2"><input type="text" placeholder="Nhập địa chỉ" id="address"></td></tr>
+            <tr>
+                <td width="50%"><input type="radio" onclick="checkGender('nam')"><label>Nam</label></td>
+                <td width="50%"><input type="radio" onclick="checkGender('nu');"><label>Nữ</label></td>
+            </tr>
+            <tr><td colspan="2"><input type="text" placeholder="Nhập mail" id="mail"></td></tr>
+            <tr><td colspan="3"><button onclick="init();" id="add">Thêm</button></td></tr>
+        </table>
+    </fieldset>
+</div>
+<div id="list" class="col-sm-9" style="margin-left: 24%;"></div>
+</div>
 </body>
 </html>
+<script src="js/variable.js"></script>
+<script src="js/function.js"></script>
+<script src="js/student.js"></script>
+<script src="js/delete.js"></script>
+<script src="js/edit.js"></script>
+<script src="js/init.js"></script>
+<script src="js/search.js"></script>
+<script src="js/shows.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous">
+</script>
+
+
+<link rel="stylesheet" href="css/css.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
